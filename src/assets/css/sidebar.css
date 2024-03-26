@@ -1,0 +1,62 @@
+
+.SideBarFather {
+    display: flex;
+    height: 100vh; /* Altura total de la ventana */
+  }
+  .Contenedor-sidebar {
+    width: 350px; /* Ancho inicial */
+    height: 100vh;
+    background: linear-gradient(to bottom right, #dddeec, #646363);
+    color: #fff;
+    overflow-y: auto; /* Agregar scrollbar cuando el contenido desborda */
+    transition: width 0.3s ease; /* Transición suave para cambiar el ancho */
+    display:contents; 
+  }
+  
+  /* Añadir clase para mostrar el sidebar */
+  .mostrar-sidebar {
+    display: block !important; /* Forzar la visibilidad del sidebar */
+  }
+  /* Estilos para la imagen del logo */
+  .Contenedor-sidebar img {
+    width: 80%;
+    padding: 20px;
+  }
+.borderBeige{
+    border-top: 2px solid #fff; /* Borde superior */
+    border-bottom: 2px solid #fff; /* Borde inferior */
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.borderBeige img {
+    width: 40px;
+    height: 40px;
+}
+.borderBeige-inf{
+  border-bottom: 2px solid #fff; /* Borde inferior */
+  width: auto
+}
+
+.borderBeige-inf img{
+  width: auto;
+}
+.borderBeige-inf  img{
+  width: auto
+}
+
+.Navbar{
+    border-bottom: 2px solid #fff; /* Borde inferior */
+}
+
+@media (max-width: 768px) {
+  .Contenedor-sidebar {
+    width: 0; /* Set width to 0 on smaller screens */
+  }
+}
+
+/* Add hover effect to show sidebar */
+.SideBarContainer:hover .Contenedor-sidebar {
+  width: 350px; /* Set width back to its initial value on hover */
+}

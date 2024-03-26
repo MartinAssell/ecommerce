@@ -1,12 +1,57 @@
+
 .App {
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #fdf9f9, #ece6e6);
+  
+}
+.Content{
+  display: flex;
+  background-color: rgb(240, 232, 232);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Container {
+  display: flex;
+  flex: 1;
 }
 
+.MainContainer {
+  flex: 3; /* El resto del espacio disponible */
+  display: flex;
+  flex-direction: column;
+}
+.advertsingContainer{
+  flex:content;
+  background-color:rgb(207, 236, 198);
+  display: flex;
+}
+.SearchBarContainer{
+  border:#ece6e6 5px solid;
+  background-color:rgb(207, 236, 198);
+
+}
+.ContenedorPrincipal{
+  display: flex;
+  margin-top: 50px;
+
+}
+.ContenedorCategorías{
+  background-color: white;
+
+}
+.ContenedorOfertas{
+  background-color: white;
+  border-left: 25px solid rgb(240, 232, 232);
+
+}
+.CarrouselWrapper{
+  display: flex;
+  position: relative;
+}
+.main-container{
+  background-color: white;
+
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

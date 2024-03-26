@@ -1,0 +1,56 @@
+/* Advertising-Bar.css */
+
+.advertising-bar {
+  position: relative; /* Establecemos posición relativa para que el fondo absoluto se posicione correctamente */
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Alineamos el contenido al centro */
+  align-items: center; /* Alineamos verticalmente los elementos al centro */
+  overflow: hidden; /* Ocultamos el texto que se desborda del contenedor */
+}
+
+.advertising-bar img {
+  width: 50px;
+  height: 50px;
+}
+
+.advertising-bar p {
+  margin: 0;
+  font-size: 30px;
+  color: #280ad3;
+  white-space: nowrap; /* Evita que el texto se desborde al siguiente renglón */
+  animation: slide 10s linear infinite; /* Aplicamos la animación al texto */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.advertising-bar a {
+  color: #000000;
+  font-style: oblique;
+  font-weight: bold; /* Corregido: la propiedad es font-weight para negrita */
+}
+
+.advertising-bar a:hover {
+  text-decoration: underline;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; /* El fondo está oculto al inicio */
+  }
+  100% {
+    opacity: 1; /* El fondo se muestra completamente al final */
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

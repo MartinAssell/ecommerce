@@ -1,0 +1,71 @@
+/* slideOpinion.css */
+
+/* Estilos del contenedor principal */
+.slideOpinionContainer {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    width: 220px;
+}
+/* Estilos del contenedor de texto */
+.slideOpinion {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: lightgrey; /* Fondo gris para el contenedor slideOpinion */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+/* Efecto de brillo */
+@keyframes brillo {
+    0% { background-position: -200% center; } /* Posición inicial del brillo */
+    100% { background-position: 200% center; } /* Posición final del brillo */
+}
+
+.slideOpinion::before {
+    content: ''; /* Crea un pseudo-elemento para aplicar el efecto de brillo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Ancho ajustado para permitir el desplazamiento */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); /* Gradiente lineal transparente */
+    animation: brillo 5s linear infinite; /* Aplica la animación de brillo */
+}
+
+/* Estilos del texto principal */
+.slideOpinion h2 {
+    writing-mode: vertical-rl;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    transition: left 0.3s ease-in-out;
+    left: 0;
+}
+.slideOpinionActive  {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Añade un efecto de brillo al texto */
+    transition: box-shadow 0.3s ease-in-out; /* Añade una transición para el efecto de brillo */
+}
+
+/* Estilos del formulario adicional */
+.formulario-adicional {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    display: block;
+    opacity: 0;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+/* Estilos del formulario adicional cuando el contenedor principal está activo */
+.slideOpinion.active .formulario-adicional {
+    left:initial;
+    opacity: 1;
+}

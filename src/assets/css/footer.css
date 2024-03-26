@@ -1,0 +1,22 @@
+.contenedorFooter {
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 10px;
+    background: linear-gradient(to bottom right, #dddeec, #646363);
+  }
+.contenedorLogosRedesSociales{
+
+}
+
+.contenedorLogosRedesSociales img{
+    width: 50px;
+    height: 50px;
+} 
+
+
+.contenedorTextos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

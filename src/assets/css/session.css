@@ -1,0 +1,31 @@
+.contenedorPrincipalSession{
+    display: flex;
+    flex-direction: row;
+    padding-right: 30px;
+    height: 60px;
+    width:75%;
+    justify-content: end;
+  }
+.contenedorSession{
+  display: flex;
+}
+.contenedorNotificacion{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 8px solid black;
+    align-items: center;
+
+   
+}
+.contenedorNotificacion img {
+    width: 20px; /* Cambia el ancho de las imágenes a 100px */
+    border-radius: 50%; /* Aplica bordes redondeados a las imágenes */
+    border: 2px solid black; /* Agrega un borde negro de 2px a las imágenes */
+    margin-right: 10px; /* Añade un margen de 10px a la derecha de cada imagen */
+    margin-left: 10px; /* Añade un margen de 10px a la derecha de cada imagen */
+  }
+  .Content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }

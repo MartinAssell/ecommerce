@@ -1,0 +1,51 @@
+.RowPrincipal{
+  width: none;
+}
+
+.ContenedorDeContentRow{
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+.ContenedorRectangulos {
+  display: flex;
+  justify-content: space-between; /* Distribuye los rectángulos horizontalmente */
+  border-bottom: 5px solid red;
+  background: linear-gradient(to right, rgb(243, 243, 243), rgb(201, 206, 201), rgb(161, 163, 161)); /* Degradado lineal de izquierda a derecha de rojo a verde a azul */
+  align-content: baseline;
+
+}
+
+.Rectangulo-Contenedor {
+  width: 25%; /* Establece el ancho de cada rectángulo */
+  margin-bottom: 20px; /* Añade un margen inferior entre los rectángulos */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 50px 50px 50px rgba(128, 124, 124, 0.5);
+  border-radius: 3%;
+  font-size: larger;
+}
+
+.ContenedorListaOrdenada{
+    flex-direction: row;
+    display: flex;
+    height: 50px;
+    align-items:center;
+}
+
+.ListaOrdenada {
+    display: flex;
+    font-size: larger;
+    flex: auto;
+    flex-direction: row-reverse;
+}
+
+.ListaOrdenada li {
+    border: 1px solid black; /* Establece el borde para cada elemento de la lista */
+    margin-right: 10px; /* Añade un espacio entre los elementos de la lista */
+    padding: 5px; /* Añade relleno interno para separar el texto del borde */
+}
+
+.IconoPequenio {
+  width: 20px;
+  height: 20px;
+}

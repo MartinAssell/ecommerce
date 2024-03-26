@@ -1,0 +1,63 @@
+.imgContainer {
+    margin: 1px solid black; /* Ajusta las unidades y el estilo del borde */
+}
+
+.imgContainer img {
+    width: 100%; /* Ancho deseado */
+    height:100% ; /* Alto deseado */
+}
+
+
+.contenedorCarrousel {
+    width:fit-content ;
+    overflow: hidden;
+    position: relative;
+    background-color:antiquewhite;
+    display:  flex;
+}
+
+.contenedorCarrousel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    animation: carrusel 20s linear infinite; /* Controla la velocidad de la animación */
+}
+
+.slide {
+    flex: 0 0 calc(100% ); /* Ancho fijo para cada imagen con un margen de 10px */
+    flex-basis: calc(100% );
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura al 100% del contenedor para mantener la proporción original */
+    object-fit:cover; /* Cubre el área completa del contenedor manteniendo la proporción */
+    margin-right: 5px; /* Compensación para eliminar el espacio entre las imágenes */
+}
+
+
+.slide img {
+    width: 500px; /* Ancho fijo */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Cubre el área completa del contenedor manteniendo la proporción */
+}
+
+
+
+
+/* Define la animación */
+@keyframes carrusel {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
